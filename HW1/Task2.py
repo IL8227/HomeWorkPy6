@@ -4,13 +4,15 @@
 
 # пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-
+# старый код
 n = int(input('Введите число: '))
 f = 1
 # for i in range(1, n+1):
 #     f *= i
 #     print(f, end=' ')
-    
 
-   
-print([lambda f: f * i for i in range(1, n + 1)])
+# новый код
+from math import factorial
+
+f = lambda x: ((x == 1) and 1) or x * factorial(x -1)
+print(list(f(i) for i in range(1, n +1)))
