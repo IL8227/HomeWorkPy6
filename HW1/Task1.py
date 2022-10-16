@@ -2,15 +2,11 @@
 
 # Пример:
 
-# - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 
+# - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ:
 
 
-
-
-from this import d
-
-
-lst = [2,3,5,9,3]
+# старый код
+lst = [2, 3, 5, 9, 3]
 s_odd = 0
 # for i in range(len(lst)):
 #     if i % 2 != 0:
@@ -18,8 +14,9 @@ s_odd = 0
 print(lst)
 # print(s_odd)
 
+# новый код
+print([s_odd + lst[i] for i in range(len(lst)) if i % 2 != 0])
 
-# r = [i % 2 != 0 for i in range(len(lst))]
 
-r = [i % 2 != 0 for i, d in enumerate(lst)]
-print()
+
+
